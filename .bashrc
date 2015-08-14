@@ -1,3 +1,21 @@
+# Drupal
+alias cc='drush cc all'
+alias stat='drush status'
+alias dl='drush dl'
+alias en='drush en -y'
+alias dis='drush dis -y'
+alias uninstall='drush pm-uninstall'
+alias fra='drush fra -y'
+alias fr='drush fr'
+alias vset='drush vset'
+alias vdel='drush vdel'
+alias cli='drush sql-cli'
+alias create='drush sql-create'
+alias uli='drush uli'
+alias pmi='drush pmi'
+alias ws='drush ws'
+alias updb='drush updb -y'
+
 # Apache2
 alias a2reload='/etc/init.d/apache2 reload'
 alias a2restart='/etc/init.d/apache2 restart'
