@@ -1,3 +1,39 @@
+# Apache2
+alias a2reload='/etc/init.d/apache2 reload'
+alias a2restart='/etc/init.d/apache2 restart'
+alias a2stop='/etc/init.d/apache2 stop'
+alias a2start='/etc/init.d/apache2 start'
+
+# MySQL
+alias myrestart='/etc/init.d/mysql restart'
+alias myreload='/etc/init.d/mysql reload'
+alias mystop='/etc/init.d/mysql stop'
+alias mystart='/etc/init.d/mysql start'
+sqlcli() {
+  if [ -n $1 ]; then
+    mysql -u $1
+  else
+    echo "MySQL username required."
+  fi
+}
+sqlwatch() {
+  if [ -n $1 ]; then
+    mysql -u$1 --exec="SHOW PROCESSLIST"
+  else
+    echo "MySQL username required."
+  fi
+}
+
+# Log
+alias errorlog='tailf /var/log/apache2/error.log'
+alias accesslog='tailf /var/log/apache2/access.log'
+
+# Process
+alias process='ps -aux'
+
+# Permissions
+alias perm='ls -l'
+
 # Git aliases.
 if hash git 2>/dev/null; then
   alias gitco='git commit -m'
