@@ -17,16 +17,16 @@ alias ws='drush ws'
 alias updb='drush updb -y'
 
 # Apache2
-alias a2reload='/etc/init.d/apache2 reload'
-alias a2restart='/etc/init.d/apache2 restart'
-alias a2stop='/etc/init.d/apache2 stop'
-alias a2start='/etc/init.d/apache2 start'
+alias a2reload='sudo /etc/init.d/apache2 reload'
+alias a2restart='sudo /etc/init.d/apache2 restart'
+alias a2stop='sudo /etc/init.d/apache2 stop'
+alias a2start='sudo /etc/init.d/apache2 start'
 
 # MySQL
-alias myrestart='/etc/init.d/mysql restart'
-alias myreload='/etc/init.d/mysql reload'
-alias mystop='/etc/init.d/mysql stop'
-alias mystart='/etc/init.d/mysql start'
+alias myrestart='sudo /etc/init.d/mysql restart'
+alias myreload='sudo /etc/init.d/mysql reload'
+alias mystop='sudo /etc/init.d/mysql stop'
+alias mystart='sudo /etc/init.d/mysql start'
 sqlcli() {
   if [ -n $1 ]; then
     mysql -u $1
